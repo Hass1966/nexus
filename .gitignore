@@ -1,7 +1,32 @@
+# Rust
 target/
+*.swp
+*.swo
+
+# Environment
 .env
+.env.local
+.env.*.local
+
+# Node / Next.js
 node_modules/
 .next/
+web/.next/
+web/node_modules/
+web/out/
+
+# IDE
 .vscode/
 .idea/
+*.iml
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Docker volumes
+pgdata/
+neo4jdata/
+qdrantdata/
+influxdata/
+redisdata/

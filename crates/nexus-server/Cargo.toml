@@ -1,0 +1,56 @@
+[package]
+name = "nexus-server"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "nexus"
+path = "src/main.rs"
+
+[dependencies]
+nexus-common = { workspace = true }
+
+# Web
+axum = { workspace = true }
+axum-extra = { workspace = true }
+tower = { workspace = true }
+tower-http = { workspace = true }
+tokio = { workspace = true }
+hyper = { workspace = true }
+
+# Serialization
+serde = { workspace = true }
+serde_json = { workspace = true }
+
+# Databases
+sqlx = { workspace = true }
+neo4rs = { workspace = true }
+qdrant-client = { workspace = true }
+influxdb2 = { workspace = true }
+redis = { workspace = true }
+
+# Auth
+jsonwebtoken = { workspace = true }
+
+# Error handling
+thiserror = { workspace = true }
+anyhow = { workspace = true }
+
+# Logging
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+
+# Config
+config = { workspace = true }
+dotenvy = { workspace = true }
+
+# Utilities
+uuid = { workspace = true }
+chrono = { workspace = true }
+reqwest = { workspace = true }
+regex = { workspace = true }
+futures = { workspace = true }
+tokio-stream = { workspace = true }
+
+[dev-dependencies]
+tokio = { version = "1", features = ["test-util", "macros"] }
